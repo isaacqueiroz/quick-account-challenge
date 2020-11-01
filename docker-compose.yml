@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+    ruby_app:     
+        build: .
+        container_name: quickaccountchallenge
+        volumes:
+            - ./:/home/app
