@@ -33,7 +33,7 @@ RSpec.describe AccountChallenge do
             end
 
             it "has a valid number of accounts" do
-                expect(AccountChallenge.read_account_input(account_input).find_by_account_id(123)).not_to be_nil
+                expect(AccountChallenge.read_account_input(account_input).select{|account| account['account_id'] == 123}).not_to be_nil
             end
 
             it "read the transaction file" do
@@ -41,12 +41,7 @@ RSpec.describe AccountChallenge do
             end
 
             it "has a valid number of transactions" do
-                expect(AccountChallenge.read_transaction_input(account_input).find_by_account_id(123)).not_to be_nil
-            end
-        end
-        context "when the input is not valit" do
-            it "will throw an error" do
-                expect(AccountChallenge.read_account_input('This is not Valid')).to raise_error(Errors::InvalidInput)
+                expect(AccountChallenge.read_transaction_input(account_input).select{|account| account['account_id'] == 123}).not_to be_nil
             end
         end
     end     
