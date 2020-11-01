@@ -3,18 +3,18 @@ RSpec.describe Account do
     subject(:valid_account) { described_class.new(123,13052) }
     let(:negative_account_transactions) { [ {
         account_id: 123,
-        value: -1500.00
+        value: -150000
     } ] }
     let(:positive_account_transactions) { [ {
         account_id: 123,
-        value: 3500.00
+        value: 350000
     } ] }
     let(:mixed_account_transactions) { [ {
         account_id: 123,
-        value: -1500.00
+        value: -150000
     }, {
         account_id: 123,
-        value: 1200.00
+        value: 120000
     } ] }
 
     describe "create a valid account" do
