@@ -64,5 +64,5 @@ This means Account 120 has balance of -256.00 after all transactions and charges
 
 ## Gem Usage
 
-rspec: To guide our TDD. Ruby is beautiful for allowing us to create this Object Oriented CLI application with such little overhead. RSpec is awesome to guide us through the process of turning natural language-like tests into code.
-byebug: Quick debugging!
+1. rspec: To guide our TDD. Ruby is beautiful for allowing us to create this Object Oriented CLI application with such little overhead. RSpec is awesome to guide us through the process of turning natural language-like tests into code.
+2. byebug: Quick debugging!
