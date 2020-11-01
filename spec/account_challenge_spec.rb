@@ -11,21 +11,21 @@ RSpec.describe AccountChallenge do
         #Basically, after conversion, we'll have an array of hashes
         let(:accounts) { [ {
             account_id: 123,
-            initial_balance: 130.52
+            initial_balance: 13052
         }, {
             account_id: 456,
-            initial_balance: 230.12
+            initial_balance: 23012
         } ] }
 
         let(:transactions) { [ {
             account_id: 123,
-            value: 3500.00
+            value: 350000
         }, {
             account_id: 123,
-            value: -1500.00
+            value: -150000
         }, {
             account_id: 456,
-            value: 150.00
+            value: 15000
         } ] }
         context "when the input is valid" do
             it "read the account input file" do
