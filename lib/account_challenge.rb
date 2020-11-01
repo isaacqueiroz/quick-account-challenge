@@ -1,15 +1,15 @@
 require 'csv'
-require 'account'
+require_relative 'account'
 class AccountChallenge
-    def self.read_account_input(input)
+    def read_account_input(input)
         @accounts_list = CSV.new(input, headers: ["account_id","initial_balance"], :header_converters => :symbol, :converters => :all).to_a.map {|row| row.to_hash }
     end
 
-    def self.read_transaction_input(input)
+    def read_transaction_input(input)
         @transactions_list = CSV.new(input, headers: ["account_id","value"], :header_converters => :symbol, :converters => :all).to_a.map {|row| row.to_hash }
     end
 
-    def self.print_balances
+    def print_balances
         @accounts = []
         # Create relevant accounts
         @accounts_list.each do |account|
