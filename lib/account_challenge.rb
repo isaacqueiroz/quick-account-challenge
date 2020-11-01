@@ -22,8 +22,7 @@ class AccountChallenge
         end
         
         @accounts.each do |account|
-            puts account.account_id
-            puts account.balance
+            puts "#{account.account_id},#{account.balance}"
         end
     end
 end
