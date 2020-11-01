@@ -44,5 +44,15 @@ RSpec.describe AccountChallenge do
                 expect(AccountChallenge.read_transaction_input(account_input).select{|account| account['account_id'] == 123}).not_to be_nil
             end
         end
+
+        context "returns a valid output" do
+            it "should print both accounts" do
+                expect{ AccountChallenge.print_balances }.to output(/123.*456/).to_stdout 
+            end
+
+            it "should print both balances" do
+                expect{ AccountChallenge.print_balances }.to output(/213052.*38012/).to_stdout 
+            end
+        end
     end     
 end

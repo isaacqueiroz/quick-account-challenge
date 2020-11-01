@@ -11,4 +11,8 @@ class AccountChallenge
     def self.read_transaction_input(input)
         @transactions = CSV.new(input, headers: ["account_id","value"], :header_converters => :symbol, :converters => :all).to_a.map {|row| row.to_hash }
     end
+
+    def self.print_balances
+        
+    end
 end
